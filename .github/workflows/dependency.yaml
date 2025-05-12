@@ -23,7 +23,7 @@ jobs:
       - run: pwd
       - name: new-step
       - name: Step 1 in dependent job1
-      - run: ls
+        run: ls
       - run: env
   dependent-job-2:
     needs: dependent-job-1
