@@ -8,7 +8,7 @@ jobs:
     steps:
       - run: date
       - run: pwd
-  job-on-windows:
+  job-on-window:
     name: A job on Windows
     runs-on: windows-latest
     steps:
@@ -16,7 +16,7 @@ jobs:
         run: date
       - run: ls
   dependent-job-1:
-    needs: [job-on-ubuntu, job-on-windows]
+    needs: [job-on-ubuntu, job-on-window]
     runs-on: macos-latest
     name: A job that runs on Macos after first two jobs
     steps:
